@@ -113,7 +113,6 @@ def main(argv):
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
     addonspath = os.path.join(projectpath, "addons")
     workdrivepath = os.path.normpath("P:")
-    temppath = os.path.join(projectpath, "temp")
 
     if not os.path.exists(os.path.normpath(projectpath + "/privatekeys/")):
         os.makedirs(os.path.normpath(projectpath + "/privatekeys/"))
@@ -136,13 +135,13 @@ def main(argv):
 
     print("  Version: {}.{}.{}.{}".format(major, minor, patch, build), "\n")
 
-    if not os.path.exists(os.path.normpath(projectpath + "/privatekeys/Brig_{}.{}.biprivatekey".format(major, minor))):
-        print("  Creating the new keys Brig_{}.{} \n".format(major, minor))
-        command = path_armake + " keygen -f " + os.path.normpath(projectpath + "/privatekeys/Brig_{}.{}".format(major, minor))
+    if not os.path.exists(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.biprivatekey".format(major, minor))):
+        print("  Creating the new keys brig_{}.{} \n".format(major, minor))
+        command = path_armake + " keygen -f " + os.path.normpath(projectpath + "/privatekeys/brig_{}.{}".format(major, minor))
         subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
 
-    shutil.copy(os.path.normpath(projectpath + "/privatekeys/Brig_{}.{}.bikey".format(major, minor)), \
-        os.path.normpath(projectpath + "/release/@dorb/keys/Brig_{}.{}.bikey".format(major, minor)))
+    shutil.copy(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.bikey".format(major, minor)), \
+        os.path.normpath(projectpath + "/release/@dorb/keys/brig_{}.{}.bikey".format(major, minor)))
 
     print("  Creating the servermod")
     releasepath = os.path.normpath(projectpath + "/release/@dorb/addons")
