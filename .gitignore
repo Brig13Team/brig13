@@ -1,2 +1,4 @@
 *.bikey
-privatekeys/Brig_1.0.biprivatekey
+release/
+privatekeys/
+*.zip

@@ -17,7 +17,7 @@ from distutils.dir_util import copy_tree
 
 ######## GLOBALS #########
 MAINPREFIX = "x"
-PREFIX = "dorb_"
+PREFIX = "brig_"
 ##########################
 
 def mod_time(path):
@@ -140,11 +140,10 @@ def main(argv):
         command = path_armake + " keygen -f " + os.path.normpath(projectpath + "/privatekeys/brig_{}.{}".format(major, minor))
         subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
 
-    shutil.copy(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.bikey".format(major, minor)), \
-        os.path.normpath(projectpath + "/release/@dorb/keys/brig_{}.{}.bikey".format(major, minor)))
+    shutil.copy(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.bikey".format(major, minor)), os.path.normpath(projectpath + "/release/@brig/keys/brig_{}.{}.bikey".format(major, minor)))
 
     print("  Creating the servermod")
-    releasepath = os.path.normpath(projectpath + "/release/@dorb/addons")
+    releasepath = os.path.normpath(projectpath + "/release/@brig/addons")
 
     for file in os.listdir(addonspath):
         path = os.path.join(addonspath, file)
@@ -163,7 +162,7 @@ def main(argv):
             subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
 
             command = path_armake + " sign -f " + os.path.normpath(projectpath + \
-                "/privatekeys/Kerberos_{}.{}.biprivatekey ".format(major, minor)) + \
+                "/privatekeys/brig_{}.{}.biprivatekey ".format(major, minor)) + \
                 os.path.normpath(releasepath + "/" + PREFIX + file + ".pbo")
             subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
 
@@ -174,7 +173,7 @@ def main(argv):
             made += 1
             print("    Successfully made {}{}.".format(PREFIX, file))
 
-    releasepath = os.path.normpath(projectpath + "/release/@dorb")
+    releasepath = os.path.normpath(projectpath + "/release/@brig")
 
     shutil.copy(os.path.normpath(projectpath + "/LICENSE"), os.path.normpath(releasepath + "/LICENSE"))
     shutil.copy(os.path.normpath(projectpath + "/README.md"), os.path.normpath(releasepath + "/README.md"))
