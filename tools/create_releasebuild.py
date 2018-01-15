@@ -8,12 +8,10 @@
 import os
 import sys
 import re
-import time
 import timeit
 import subprocess
 import shutil
 import platform
-from distutils.dir_util import copy_tree
 
 ######## GLOBALS #########
 MAINPREFIX = "x"
@@ -131,16 +129,20 @@ def main(argv):
         path_armake = "armake"
         workdrivepath = os.path.normpath("/mnt/p/")
 
-    major, minor, patch, build = get_version(os.path.normpath(addonspath + "/main/script_version.hpp"), version_increments)
+    major, minor, patch, build = get_version(os.path.normpath(addonspath + \
+        "/main/script_version.hpp"), version_increments)
 
     print("  Version: {}.{}.{}.{}".format(major, minor, patch, build), "\n")
 
-    if not os.path.exists(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.biprivatekey".format(major, minor))):
+    if not os.path.exists(os.path.normpath(projectpath + \
+        "/privatekeys/brig_{}.{}.biprivatekey".format(major, minor))):
         print("  Creating the new keys brig_{}.{} \n".format(major, minor))
-        command = path_armake + " keygen -f " + os.path.normpath(projectpath + "/privatekeys/brig_{}.{}".format(major, minor))
+        command = path_armake + " keygen -f " + os.path.normpath(projectpath + \
+            "/privatekeys/brig_{}.{}".format(major, minor))
         subprocess.check_output(command, stderr=subprocess.STDOUT, shell=True)
 
-    shutil.copy(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.bikey".format(major, minor)), os.path.normpath(projectpath + "/release/@brig/keys/brig_{}.{}.bikey".format(major, minor)))
+    shutil.copy(os.path.normpath(projectpath + "/privatekeys/brig_{}.{}.bikey".format(major, minor \
+    )), os.path.normpath(projectpath + "/release/@brig/keys/brig_{}.{}.bikey".format(major, minor)))
 
     print("  Creating the servermod")
     releasepath = os.path.normpath(projectpath + "/release/@brig/addons")
@@ -175,8 +177,10 @@ def main(argv):
 
     releasepath = os.path.normpath(projectpath + "/release/@brig")
 
-    shutil.copy(os.path.normpath(projectpath + "/LICENSE"), os.path.normpath(releasepath + "/LICENSE"))
-    shutil.copy(os.path.normpath(projectpath + "/README.md"), os.path.normpath(releasepath + "/README.md"))
+    shutil.copy(os.path.normpath(projectpath + "/LICENSE"), \
+        os.path.normpath(releasepath + "/LICENSE"))
+    shutil.copy(os.path.normpath(projectpath + "/README.md"), \
+        os.path.normpath(releasepath + "/README.md"))
 
     os.chdir(os.path.normpath(projectpath))
     shutil.make_archive("@brig", "zip", os.path.normpath(projectpath + "/release"))
