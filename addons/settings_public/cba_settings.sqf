@@ -375,11 +375,29 @@ force ace_zeus_zeusBird = false;
 // Bundeswehr
 BWA3_NaviPad_showMembers = true;
 
-// Task Force Arrowhead Radio
-TF_default_radioVolume = 9;
-force TF_give_microdagr_to_soldier = false;
-force TF_give_personal_radio_to_regular_soldier = false;
-force TF_no_auto_long_range_radio = true;
-force TF_same_dd_frequencies_for_side = true;
-force TF_same_lr_frequencies_for_side = true;
-force TF_same_sw_frequencies_for_side = true;
+// Task Force Arrowhead Radio 1.0
+force TFAR_AICanHearPlayer = true;
+force TFAR_AICanHearSpeaker = true;
+force TFAR_terrain_interception_coefficient = 7;
+force TFAR_globalRadioRangeCoef = 1;
+force TFAR_fullDuplex = true;
+force TFAR_enableIntercom = true;
+force TFAR_objectInterceptionEnabled = true;
+force TFAR_takingRadio = true;
+force TFAR_spectatorCanHearEnemyUnits = true;
+force TFAR_spectatorCanHearFriendlies = true;
+force TFAR_Teamspeak_Channel_Name = "Publicserver_Funk";
+force TFAR_Teamspeak_Channel_Password = "TFAR";
+force TFAR_SameSRFrequenciesForSide = true;
+force TFAR_setting_defaultFrequencies_sr_west = [100,110,120,130,140,150,160,170,180];
+force TFAR_setting_defaultFrequencies_sr_east = [100,110,120,130,140,150,160,170,180];
+force TFAR_setting_defaultFrequencies_sr_independent = [100,110,120,130,140,150,160,170,180];
+force TFAR_SameLRFrequenciesForSide = true;
+force TFAR_setting_defaultFrequencies_lr_west = [50,40,60,45,55,30,35,65,70,75];
+force TFAR_setting_defaultFrequencies_lr_east = [50,40,60,45,55,30,35,65,70,75];
+force TFAR_setting_defaultFrequencies_lr_independent = [50,40,60,45,55,30,35,65,70,75];
+force TFAR_giveMicroDagrToSoldier = false;
+force TFAR_givePersonalRadioToRegularSoldier = false;
+force TFAR_giveLongRangeRadioToGroupLeaders = false;
+force TFAR_radioCodesDisabled = true;
+force TFAR_instantiate_instantiateAtBriefing = false;
