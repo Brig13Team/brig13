@@ -220,7 +220,7 @@ force ace_nightvision_aimDownSightsBlur = 0.2;
 force ace_nightvision_disableNVGsWithSights = false;
 force ace_nightvision_effectScaling = 0.6;
 force ace_nightvision_fogScaling = 0.6;
-force ace_nightvision_noiseScaling = 0.6; 
+force ace_nightvision_noiseScaling = 0.6;
 
 // ACE Overheating
 ace_overheating_displayTextOnJam = true;
@@ -375,6 +375,14 @@ force ace_zeus_zeusBird = false;
 // Bundeswehr
 BWA3_NaviPad_showMembers = true;
 
+// Task Force Arrowhead Radio
+TF_default_radioVolume = 9;
+force TF_give_microdagr_to_soldier = false;
+force TF_give_personal_radio_to_regular_soldier = false;
+force TF_no_auto_long_range_radio = true;
+force TF_same_dd_frequencies_for_side = true;
+force TF_same_lr_frequencies_for_side = true;
+force TF_same_sw_frequencies_for_side = true;
 
 // TFAR - global settings
 force TFAR_AICanHearPlayer = true; 
