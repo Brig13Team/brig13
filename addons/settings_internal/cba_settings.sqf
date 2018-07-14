@@ -382,3 +382,25 @@ force TF_no_auto_long_range_radio = true;
 force TF_same_dd_frequencies_for_side = true;
 force TF_same_lr_frequencies_for_side = true;
 force TF_same_sw_frequencies_for_side = true;
+
+// TFAR - global settings
+force TFAR_AICanHearPlayer = true;
+force TFAR_AICanHearSpeaker = true;
+force TFAR_enableIntercom = true;
+force TFAR_fullDuplex = true;
+force TFAR_giveLongRangeRadioToGroupLeaders = false;
+force TFAR_giveMicroDagrToSoldier = false;
+force TFAR_givePersonalRadioToRegularSoldier = false;
+force TFAR_globalRadioRangeCoef = 1;
+force TFAR_instantiate_instantiateAtBriefing = false;
+force TFAR_objectInterceptionEnabled = true;
+force tfar_radiocode_east = "_opfor";
+force tfar_radiocode_independent = "_independent";
+force tfar_radiocode_west = "_bluefor";
+force tfar_radioCodesDisabled = false;
+force TFAR_SameLRFrequenciesForSide = true;
+force TFAR_SameSRFrequenciesForSide = true;
+force TFAR_spectatorCanHearEnemyUnits = true;
+force TFAR_spectatorCanHearFriendlies = true;
+force TFAR_takingRadio = 2;
+force tfar_terrain_interception_coefficient = 7;

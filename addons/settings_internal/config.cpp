@@ -11,3 +11,9 @@ class CfgPatches {
         authors[] = {"Dorbedo"};
     };
 };
+
+class Extended_PostInit_EventHandlers {
+    class dorb_cba_settings_userconfig {
+        serverinit = "compile preProcessFileLineNumbers 'cba_settings_userconfig\XEH_ServerPostInit.sqf'";
+    };
+};

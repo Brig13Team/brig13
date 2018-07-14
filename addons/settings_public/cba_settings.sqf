@@ -38,7 +38,7 @@ force ace_captives_requireSurrenderAi = false;
 // ACE Common
 force ace_common_checkPBOsAction = 2;
 force ace_common_checkPBOsCheckAll = true;
-force ace_common_checkPBOsWhitelist = "['brig_main','brig_rhsfix','cba_settings_userconfig','dorb_debug','dorb_main','dorb_common','dorb_composition','dorb_artillery','dorb_database','dorb_headless','dorb_headquarter','dorb_intercept','dorb_mission','dorb_spawn','dorb_worlds','asr_ai3_cfgammo','asr_ai3_cfgcamouflage','asr_ai3_cfgvehicles','asr_ai3_cfgweapons','asr_ai3_greenrico','asr_ai3_incognito','asr_ai3_main','asr_ai3_rhs_gr_c','asr_ai3_rhs_gr_camo_c','asr_ai3_rhs_ru_c','asr_ai3_rhs_ru_camo_c','asr_ai3_rhs_us_c','asr_ai3_rhs_us_camo_c','asr_ai3_rhs_saf_c','asr_ai3_rhs_saf_camo_c','asr_ai3_bwa3_c','asr_ai3_bwa3_camo_c','asr_ai3_niarms_c','cba_diagnostic_enable_perf_loop','cba_diagnostic_logging','cba_cache_disable','cba_diagnostic_disable_xeh_logging','Disable_XEH_Logging','cba_diagnostic_enable_logging','BWA3_EnablePIPOptics','BWA3_EnablePIPOptics','extdb3','kerb_main','kerb_man','kerb_vehicles']";
+force ace_common_checkPBOsWhitelist = "['brig_main','brig_rhsfix','cba_settings_userconfig','dorb_debug','dorb_main','dorb_common','dorb_composition','composition_c1','composition_c2','composition_c3','composition_c4','composition_c5','composition_cm1','composition_cm2','composition_h1','composition_h2','composition_h3','composition_h4','composition_h5','composition_h6','composition_hm1','composition_hm2','composition_hm3','dorb_artillery','dorb_database','dorb_headless','dorb_headquarter','dorb_intercept','dorb_mission','dorb_spawn','dorb_worlds','asr_ai3_cfgammo','asr_ai3_cfgcamouflage','asr_ai3_cfgvehicles','asr_ai3_cfgweapons','asr_ai3_greenrico','asr_ai3_incognito','asr_ai3_main','asr_ai3_rhs_gr_c','asr_ai3_rhs_gr_camo_c','asr_ai3_rhs_ru_c','asr_ai3_rhs_ru_camo_c','asr_ai3_rhs_us_c','asr_ai3_rhs_us_camo_c','asr_ai3_rhs_saf_c','asr_ai3_rhs_saf_camo_c','asr_ai3_bwa3_c','asr_ai3_bwa3_camo_c','asr_ai3_niarms_c','cba_diagnostic_enable_perf_loop','cba_diagnostic_logging','cba_cache_disable','cba_diagnostic_disable_xeh_logging','Disable_XEH_Logging','cba_diagnostic_enable_logging','BWA3_EnablePIPOptics','BWA3_EnablePIPOptics','extdb3','kerb_main','kerb_man','kerb_vehicles']";
 ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
 ace_common_settingFeedbackIcons = 1;
@@ -374,11 +374,25 @@ force ace_zeus_zeusBird = false;
 // Bundeswehr
 BWA3_NaviPad_showMembers = true;
 
-// Task Force Arrowhead Radio
-TF_default_radioVolume = 9;
-force TF_give_microdagr_to_soldier = false;
-force TF_give_personal_radio_to_regular_soldier = false;
-force TF_no_auto_long_range_radio = true;
-force TF_same_dd_frequencies_for_side = true;
-force TF_same_lr_frequencies_for_side = true;
-force TF_same_sw_frequencies_for_side = true;
+
+// TFAR - global settings
+force TFAR_AICanHearPlayer = true;
+force TFAR_AICanHearSpeaker = true;
+force TFAR_enableIntercom = true;
+force TFAR_fullDuplex = true;
+force TFAR_giveLongRangeRadioToGroupLeaders = false;
+force TFAR_giveMicroDagrToSoldier = false;
+force TFAR_givePersonalRadioToRegularSoldier = false;
+force TFAR_globalRadioRangeCoef = 1;
+force TFAR_instantiate_instantiateAtBriefing = false;
+force TFAR_objectInterceptionEnabled = true;
+force tfar_radiocode_east = "_opfor";
+force tfar_radiocode_independent = "_independent";
+force tfar_radiocode_west = "_bluefor";
+force tfar_radioCodesDisabled = false;
+force TFAR_SameLRFrequenciesForSide = true;
+force TFAR_SameSRFrequenciesForSide = true;
+force TFAR_spectatorCanHearEnemyUnits = true;
+force TFAR_spectatorCanHearFriendlies = true;
+force TFAR_takingRadio = 2;
+force tfar_terrain_interception_coefficient = 7;
