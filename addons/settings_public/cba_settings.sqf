@@ -200,7 +200,7 @@ force ace_medical_useLocation_SurgicalKit = 0;
 // ACE Mk6 Mortar
 force ace_mk6mortar_airResistanceEnabled = true;
 force ace_mk6mortar_allowCompass = true;
-force ace_mk6mortar_allowComputerRangefinder = false;
+force ace_mk6mortar_allowComputerRangefinder = true;
 force ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Name Tags
